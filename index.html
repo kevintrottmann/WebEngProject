@@ -40,39 +40,13 @@
 				
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="./pages/registration.php"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
-					<li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-log-in"></span> Anmelden</a></li>
+					<li><a href="./pages/login_a.php"><span class="glyphicon glyphicon-log-in"></span> Anmelden</a></li>
 				</ul>
 			</div>
 		</nav>
 		
 		<!-- Modal -->
-		<div id="LoginModal" class="modal">
-  			<span onclick="document.getElementById('LoginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
-		    
-				<!-- Modal content-->
-				<form class="modal-content animate" action="./pages/userlogin.php">
-    				<div class="imgcontainer">
-      					<span onclick="document.getElementById('LoginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
-      					<img src="./pictures/user_login.png" alt="Benutzerlogin" class="avatar">
-    				</div>
-
-				    <div class="container">
-				      	<label><b>Benutzername</b></label>
-						<input type="text" placeholder="Benutzername" name="uname" required>
-					
-				      	<label><b>Passwort</b></label>
-				      	<input type="password" placeholder="Passwort" name="psword" required>
-					
-				      	<button type="submit">Login</button>
-				      	<input type="checkbox" checked="checked"> Remember me
-				    </div>
-
-				    <div class="container" style="background-color:#f1f1f1">
-				      <button type="button" onclick="document.getElementById('LoginModal').style.display='none'" class="cancelbtn">Cancel</button>
-				      <span class="psw">Forgot <a href="./pages/pswreset.php"> password?</a></span>
-				    </div>
-				</form>
-			</div>
+	
 		
 		<script>
 			var modal = document.getElementById('LoginModal');
@@ -91,9 +65,9 @@
 				<p><span>Photoca.se | Beispielstrasse 11, CH-0000 Irgendwo (AG) | Tel +41 56 111 22 33</span></p>
         	</div>
 		</footer>
-		-->
 		
-		<!-- Here begins the content area -->
+		
+	
 			
 		
 	</body>
