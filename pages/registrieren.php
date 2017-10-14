@@ -5,9 +5,15 @@ $pdo = new PDO('mysql:host=localhost;dbname=db_photocase', 'db_root', 'aVu8k&13'
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>Registrierung</title> 
+  <title>Registrierung</title>
+  <?php
+		include("navbar.php");
+	?>
 </head> 
 <body>
+<?php
+include("navbar.php");
+?>
  
 <?php
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
@@ -67,7 +73,7 @@ E-Mail:<br>
 <input type="email" size="40" maxlength="250" name="email"><br><br>
  
 Dein Passwort:<br>
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
+<input type="password" size="40"  maxlength="250" name="passwort"><br><br>
  
 Passwort wiederholen:<br>
 <input type="password" size="40" maxlength="250" name="passwort2"><br><br>

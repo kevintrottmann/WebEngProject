@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-	<head>
-		<!-- Required meta tags -->
+<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
@@ -18,12 +14,8 @@
 		<!-- Stylesheets 
 		<link rel="stylesheet" href="./css/modal.css">	
 		-->	
-		
-	</head>
-	
-	
-	<body>
-		<!-- Static Navigation-Bar -->
+
+<!-- Static Navigation-Bar -->
 		<nav class="navigation navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 			  	<div class="navbar-header">
@@ -34,19 +26,13 @@
 					<li class="active"> <a href="https://www.photoca.se">Home</a></li>
 					<li><a href="#">Preise</a></li>
 					<li><a href="#">Buchen</a></li>
-					<li><a href="#">Über</a></li>
+					<li><a href="#">&Uuml;ber</a></li>
 					<li><a href="#">Kontakt</a></li>
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="./pages/registrieren.php"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
-					<li><a href="./pages/login.php"><span class="glyphicon glyphicon-log-in"></span> Anmelden</a></li>
+					<li><a href="registrieren.php"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
+					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Anmelden</a></li>
 				</ul>
 			</div>
 		</nav>
-<?php
-include_once('./pages/dbcon.php');
-
-?>
-	</body>
-</html>
