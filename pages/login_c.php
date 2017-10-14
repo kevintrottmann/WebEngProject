@@ -9,6 +9,6 @@ echo "Ihre Session-ID: ".session_id();
 echo "<br/>";
 ?>
 
-<a href="index.php"> Logout</a>
+<a href="./pages/index.php"> Logout</a>
 
  

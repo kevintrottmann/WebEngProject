@@ -1,9 +1,3 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login Fenster</title>
-    </head>
-    <body>
 <?php
 session_start();
 
@@ -34,5 +28,13 @@ else
     header("Location:login_a.php");
 }
 ?>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Fenster</title>
+    </head>
+    <body>
+
     </body>
 </html>
