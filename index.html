@@ -39,36 +39,14 @@
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="./pages/registration.php"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
+					<li><a href="./pages/erfassen.php"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
 					<li><a href="./pages/login_a.php"><span class="glyphicon glyphicon-log-in"></span> Anmelden</a></li>
 				</ul>
 			</div>
 		</nav>
-		
-		<!-- Modal -->
-	
-		
-		<script>
-			var modal = document.getElementById('LoginModal');
-			
-			window.onclick = function(event) {
-			    if (event.target == modal) {
-			        modal.style.display = "none";
-			    }
-			}
-		</script>	
-		  
-			
-			
-		<!-- footer class="footer"> Does not work, don't know why!!!
-			<div class="container">
-				<p><span>Photoca.se | Beispielstrasse 11, CH-0000 Irgendwo (AG) | Tel +41 56 111 22 33</span></p>
-        	</div>
-		</footer>
-		
-		
-	
-			
-		
+<?php
+include_once('./pages/dbcon.php');
+
+?>
 	</body>
 </html>
