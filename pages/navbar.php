@@ -19,13 +19,13 @@
 		<nav class="navigation navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 			  	<div class="navbar-header">
-					<a href="https://www.photoca.se" class="navbar-brand"><img src="./pictures/logo/photocase_logo_small.png" alt="PhotoCase" style="auto"></a>
+					<a href="https://www.photoca.se" class="navbar-brand"><img src="../pictures/logo/photocase_logo_small.png" alt="PhotoCase" style="auto"></a>
 				</div>
 			
 				<ul class="nav navbar-nav">
 					<li class="active"> <a href="https://www.photoca.se">Home</a></li>
 					<li><a href="#">Preise</a></li>
-					<li><a href="#">Buchen</a></li>
+					<li><a href="buchen.php">Buchen</a></li>
 					<li><a href="#">&Uuml;ber</a></li>
 					<li><a href="#">Kontakt</a></li>
 				</ul>
