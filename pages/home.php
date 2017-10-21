@@ -33,7 +33,7 @@
 				<ul class="nav navbar-nav">
 					<li class="active"> <a href="https://www.photoca.se">Home</a></li>
 					<li><a href="./prices">Preise</a></li>
-					<li><a href="./book">Buchen</a></li>
+					<li><a href="./booking">Buchen</a></li>
 					<li><a href="./about">Über</a></li>
 					<li><a href="./contact">Kontakt</a></li>
 				</ul>
