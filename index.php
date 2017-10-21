@@ -6,23 +6,23 @@ $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 switch ($request_uri[0]) {
     // Home page
     case '/':
-        require '../pages/home.php';
+        require './pages/home.php';
         break;
 	// Booking page
-    case '/booking':
-        require '../pages/buchen.php';
+    case './booking':
+        require '.photoca.se/pages/buchen.php';
         break;
 	// Login page
     case '/login':
-        require '../pages/login.php';
+        require './pages/login.php';
         break;	
 	// Register page
     case '/register':
-        require '../pages/register.php';
+        require './pages/register.php';
         break;	
     // About page
     case '/about':
-        require '../pages/about.php';
+        require './pages/about.php';
         break;
     // Everything else
     default:
