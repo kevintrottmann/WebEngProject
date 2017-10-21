@@ -22,7 +22,7 @@
 		 $passwort2 = $_POST['passwort2'];
 		  
 		 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		 echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+		 echo 'Bitte eine gï¿½ltige E-Mail-Adresse eingeben<br>';
 		 $error = true;
 		 } 
 		 if(strlen($passwort) == 0) {
@@ -30,11 +30,11 @@
 		 $error = true;
 		 }
 		 if($passwort != $passwort2) {
-		 echo 'Die Passwörter müssen übereinstimmen<br>';
+		 echo 'Die Passwï¿½rter mï¿½ssen ï¿½bereinstimmen<br>';
 		 $error = true;
 		 }
 		 
-		 //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
+		 //ï¿½berprï¿½fe, dass die E-Mail-Adresse noch nicht registriert wurde
 		 if(!$error) { 
 		 $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
 		 $result = $statement->execute(array('email' => $email));
@@ -46,7 +46,7 @@
 		 } 
 		 }
 		 
-		 //Keine Fehler, wir können den Nutzer registrieren
+		 //Keine Fehler, wir kï¿½nnen den Nutzer registrieren
 		 if(!$error) { 
 		 $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
 		 
@@ -69,6 +69,58 @@
 		<input type="password" size="40"  maxlength="250" name="passwort"><br><br>Passwort wiederholen:<br>
 		<input type="password" size="40" maxlength="250" name="passwort2"><br><br>
 		<input type="submit" value="Abschicken">
+		</form>
+		
+		<h2> Benutzerangaben </h2>
+		<form>
+			<div class="form-group">
+				<label for="lastname">Nachname:</label>
+				<input type="lastname" class="form-control" id="lastname">
+			</div>
+			
+			<div class="form-group">
+				<label for="firstname">Vorname:</label>
+				<input type="firstname" class="form-control" id="firstname">
+			</div>
+		
+			<div class="form-group">
+				<label for="street">Strasse:</label>
+				<input type="street" class="form-control" id="street">
+			</div>
+			
+			<div class="form-group">
+				<label for="zipcode">PLZ:</label>
+				<input type="zipcode" class="form-control" id="zipcode">
+			</div>
+			
+			<div class="form-group">
+				<label for="place">Ort:</label>
+				<input type="place" class="form-control" id="place">
+			</div>
+		</form>
+
+		
+		<h2> Benutzerkonto </h2>
+		<form>	
+			<div class="form-group">
+				<label for="email">Email address:</label>
+				<input type="email" class="form-control" id="email">
+			</div>
+			
+			<div class="form-group">
+				<label for="pwd">Password:</label>
+				<input type="password" class="form-control" id="pwd">
+			</div>
+			
+			<div class="checkbox">
+				<label><input type="checkbox"> Direkt zur Buchung </label>
+			</div>
+			
+			<div class="checkbox">
+				<label><input type="checkbox"> Mail-Newsletter erhalten </label>
+			</div>
+			
+			<button type="submit" class="btn btn-default">Registrieren</button>
 		</form>
  
 		<?php
