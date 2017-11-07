@@ -6,7 +6,6 @@
 
         <ul class="nav navbar-nav">
             <li class="active"> <a href="https://www.photoca.se">Home</a></li>
-            <li><a href="index.php?page=preise">Preise</a></li>
             <li><a href="index.php?page=buchen">Buchen</a></li>
             <li><a href="index.php?page=kontakt">Kontakt</a></li>
         </ul>
