@@ -1,6 +1,6 @@
 		<?php 
 		session_start();
-		$pdo = new PDO('mysql:host=localhost;dbname='db_photocase','db_root','aVu8k&13');
+		$pdo = new PDO('mysql:host=localhost';'db_photocase','db_root','aVu8k&13');
 		 
 		if(isset($_GET['login'])) {
 		 $email = $_POST['email'];
@@ -17,16 +17,14 @@
 		 } else {
 		 $errorMessage = "E-Mail oder Passwort war ung�ltig<br>";
 		 }
-		 
-		}
 		?>
 
 		<?php 
-		    if(isset($errorMessage)) {
-		    echo $errorMessage;
+		if(isset($errorMessage)) {
+		 echo $errorMessage;
 		}
-		
-    
+		?>
+
 		<form action="?login=1" method="post">
 		<br><br><br><br><br>E-Mail:<br>
 		<input type="email" size="40" maxlength="250" name="email"><br><br>Dein Passwort:<br>

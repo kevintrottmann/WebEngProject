@@ -27,15 +27,18 @@
 	
 	
 	<body>
-        <div class="container">
-		    <?php
-			    include('./pages/navbar.php');
-		    ?>
+        <div class="container-fluid">
+            <div class="row">
+                <?php
+                include('./pages/navbar.php');
+                ?>
+            </div>
+
+            <div class="row">
+                <?php
+                include($pageToInclude);
+                ?>
+            </div>
         </div>
-        <div class="container">
-		<?php
-			include($pageToInclude);
-		?>
-		<div>
 	</body>
 </html>
