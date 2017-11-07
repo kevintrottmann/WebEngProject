@@ -21,29 +21,19 @@
     //Datenbank request speichern
     ?>
 
-<html> 
-	<head>
-		<title>Buchen</title>
-		<?php
-			include_once('navbar.php');
-		?>
-        <link type="text/css" rel="stylesheet" href="../css/booking-form.css"
-	</head>
-    <body>
-
     <form action="buchen.php" method="GET" name="buchungssubmit">
         <!--  General -->
         <div class="form-group">
-            <h2 class="heading">Booking & contact</h2>
+            <h2 class="heading">Buchung</h2>
             <div class="grid">
                 <div class="col-2-3">
                     <div class="controls">
-                        <input type="text" id="sirname" class="floatLabel" name="sirname" placeholder="Vorname">
+                        <input type="text" id="nachname" class="floatLabel" name="nachname" placeholder="Nachname">
                     </div>
                 </div>
                 <div class="col-1-3">
                     <div class="controls">
-                        <input type="text" id="firstname" class="floatLabel" name="firstname" placeholder="Nachname">
+                        <input type="text" id="vorname" class="floatLabel" name="vorname" placeholder="Vorname">
                     </div>
                 </div>
             </div>
@@ -104,5 +94,3 @@
             </div>
         </div> <!-- /.form-group -->
     </form>
-    </body>
-</html>
