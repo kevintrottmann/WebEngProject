@@ -3,7 +3,7 @@
 	if(isset($_GET['page'])){	
 		$pageToInclude = './pages/' . $_GET['page'] . '.php';			
 	}
-
+    /*Session-Check
     session_start();
     if(!isset($_SESSION['userid'])) {
     die('Bitte zuerst <a href="login.php">einloggen</a>');
@@ -13,6 +13,7 @@
     $userid = $_SESSION['userid'];
 
     echo "Hallo User: ".$userid;
+    */
 ?>
 
 <!DOCTYPE html>
