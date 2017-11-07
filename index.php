@@ -27,12 +27,12 @@
 	
 	
 	<body>
-        <div class="container-fluid">
+        <div class="container">
 		    <?php
-			    include('./pages/navbar_new.php');
+			    include('./pages/navbar.php');
 		    ?>
         </div>
-        <div class="container-fluid">
+        <div class="container">
 		<?php
 			include($pageToInclude);
 		?>
