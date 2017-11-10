@@ -11,13 +11,64 @@
     ================================================== */
 
     print_r($_GET);
-    $firstname = "";
-    $lastname = "";
+    $nachname = "";
+    $vorname = "";
+    $email = "";
+    $phone = "";
+    $street = "";
+    $streetnumber = "";
+    $city = "";
+    $postcode = "";
+    $arrive = "";
+    $depart = "";
+    $comments = "";
 
 
-    if(isset($_GET['firstname'])){
-        $firstname = $_GET['firstname'];
+    if(isset($_GET['nachname'])){
+        $nachname = $_GET['nachname'];
     }
+
+    if(isset($_GET['vorname'])){
+        $vorname= $_GET['vorname'];
+    }
+
+    if(isset($_GET['email'])){
+        $email = $_GET['email'];
+    }
+
+    if(isset($_GET['phone'])){
+        $phone = $_GET['phone'];
+    }
+
+    if(isset($_GET['street'])){
+        $street = $_GET['street'];
+    }
+
+    if(isset($_GET['street-number'])){
+        $streetnumber = $_GET['street-number'];
+    }
+
+    if(isset($_GET['city'])){
+        $city = $_GET['city'];
+    }
+
+    if(isset($_GET['post-code'])){
+        $postcode = $_GET['post-code'];
+    }
+
+    if(isset($_GET['arrive'])){
+        $arrive = $_GET['arrive'];
+    }
+
+    if(isset($_GET['depart'])){
+        $depart = $_GET['depart'];
+    }
+
+    if(isset($_GET['comments'])){
+        $comments = $_GET['comments'];
+    }
+
+
     //Datenbank request speichern
     ?>
 
