@@ -1,4 +1,5 @@
 <!-- Static Navigation-Bar -->
+<div class="containter-fluid">
 <nav class="navigation navbar-inverse navbar-fixed-top">
     <!--
     <div class="navbar-header">
@@ -17,3 +18,4 @@
         <li><a href="index.php?page=login"><span class="glyphicon glyphicon-log-in"></span> Anmelden</a></li>
     </ul>
 </nav>
+</div>
