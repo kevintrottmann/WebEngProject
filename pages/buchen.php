@@ -68,7 +68,11 @@
 
     //Datenbank request speichern
     ?>
-
+	<html>
+	<head>
+	</head>
+	<body>
+	
     <form action="buchen.php" method="GET" name="buchungssubmit">
         <!--  General -->
         <div class="form-group">
@@ -142,3 +146,6 @@
             </div>
         </div> <!-- /.form-group -->
     </form>
+	
+	</body>
+	</html>
