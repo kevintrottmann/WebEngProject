@@ -1,11 +1,22 @@
 <?php
 include 'db.connection.php';
 
-$id_buchungen=$_REQUEST['loeschen_buchungen'];
+if (isset($_POST['submit'])) {
+if(isset($_POST['radio']))
+{
+echo "<span>You have selected :<b> ".$_POST['radio']."</b></span>";
+}
+else{ echo "<span>Please choose any radio button.</span>";}
+}
 
-$delsql ="DELETE FROM buchungen WHERE id_buchung=".$id_buchung."";  
+
+
+$id_buchungen=$_POST['loeschen_buchungen'];
+echo $id_buchungen;
+
+$delsql ="DELETE FROM buchungen WHERE id_buchung=".$id_buchungen."";  
 		
-$eintragen = mysqli_query($link,$delsqlsql);
+$eintragen = mysqli_query($link,$delsql);
 
 echo $delsql;
 
