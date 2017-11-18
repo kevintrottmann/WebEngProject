@@ -69,10 +69,5 @@ echo "<br />";
 <head>
 </head>
 <body>
-<form action="">
-  <input type="radio" name="loeschen_buchungen" value="male"> Male<br>
-  <input type="radio" name="loeschen_buchungen" value="female"> Female<br>
-  <input type="radio" name="loeschen_buchungen" value="other"> Other
-</form>
 </body>
 </html>

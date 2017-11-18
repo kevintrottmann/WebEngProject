@@ -30,10 +30,6 @@ echo "<br />";
 ?>
  <input type="submit" value="Eintrag löschen"/>
 </form>
-<a href="./pages/db_view.php">db_view.php</a><br/>
- <a href="./pages/db_add.php">db_add.php</a><br/>
- <a href="./pages/db_change.php">db_change.php</a><br/>
- <a href="./pages/db_delete.php">db_delete.php</a><br/>
- 
+
  </body>
  </html>

@@ -21,4 +21,4 @@ echo $addsql;
 
 ?> 
 
- <a href="./pages/db_view.php">db_view.php</a><br>
+ <a href="db_view.php">db_view.php</a><br>

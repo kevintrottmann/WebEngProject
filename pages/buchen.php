@@ -72,9 +72,9 @@
 	<head>
 	</head>
 	<body>
-	
+	<!--
     <form action="buchen.php" method="GET" name="buchungssubmit">
-        <!--  General -->
+        <!--  General --><!--
         <div class="form-group">
             <h2 class="heading">Buchung</h2>
             <div class="grid">
@@ -120,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <!--  Details -->
+        <!--  Details --><!-- 
         <div class="form-group">
             <h2 class="heading">Details</h2>
             <div class="grid">
@@ -145,7 +145,12 @@
                 <button type="submit" value="Submit" class="col-1-4">Submit</button>
             </div>
         </div> <!-- /.form-group -->
-    </form>
+   <!-- </form>-->
+</br>
+<a href="db_view.php">db_view.php</a><br/>
+ <a href="db_add.php">db_add.php</a><br/>
+ <a href="db_change.php">db_change.php</a><br/>
+ <a href="db_delete.php">db_delete.php</a><br/>
 	
 	</body>
 	</html>
