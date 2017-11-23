@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UserInterface</title>
     <link rel="stylesheet" href="assets/bootstrap/css/welcome.bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News+Cycle:400,700">
     <link rel="stylesheet" href="assets/css/user.css">

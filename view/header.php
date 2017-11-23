@@ -1,4 +1,5 @@
- <nav class="navbar navbar-default">
+ 
+<nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header"><a class="navbar-brand" href="#">Photoca.se </a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
