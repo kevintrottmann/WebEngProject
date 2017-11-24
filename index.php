@@ -23,7 +23,7 @@ if(isset($_GET['login'])) {
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="view/assets/bootstrap/css/bootstrap.min.css">

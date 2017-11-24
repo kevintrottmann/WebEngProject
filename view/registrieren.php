@@ -50,13 +50,12 @@ if(isset($_GET['register'])) {
  
  //Keine Fehler, wir können den Nutzer registrieren
  if(!$error) { 
- $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
  
  $statement = $pdo->prepare("INSERT INTO users (email, passwort) VALUES (:email, :passwort)");
- $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
+ $result = $statement->execute(array('email' => $email, 'passwort' => $passwort));
  
  if($result) { 
- header('Location: ./index.php');
+ echo'Weiterleiten zur Seite';
  $showFormular = false;
  } else {
  echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
