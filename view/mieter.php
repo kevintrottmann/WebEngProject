@@ -28,12 +28,11 @@ include "db.connection.php"; ?>
                 <tbody>
                         <?php
                         $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
-                        echo $res_mieter;
-                        while ($datensatz=mysqli_fetch_assoc($res_mieter))
+                        //while ($datensatz=mysqli_fetch_assoc($res_mieter))
 
 
 
-                        {
+                        //{
 
                         "<tr><td>".$datensatz["ID"]."</td>";
                         "<td>".$datensatz["Nachname"]."</td>";
@@ -44,7 +43,7 @@ include "db.connection.php"; ?>
                         "<td>".$datensatz["Mietzins"]."</td>";
                         "<td>".$datensatz["Periode"]."</td></tr>";
                         //"<td>"<button class=\"btn btn-primary\" type=\"button\"> DEL </button><button class=\"btn btn-primary\" type=\"button\"> CHG </button>"</td></tr>";
-                        }
+                        //}
                         ?>
                 </tbody>
             </table>
