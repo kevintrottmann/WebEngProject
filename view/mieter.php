@@ -13,7 +13,7 @@ include "db.connection.php"; ?>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Mieter ID</th>
                         <th>Vorname</th>
                         <th>Nachname</th>
                         <th>Strasse</th>
@@ -27,11 +27,21 @@ include "db.connection.php"; ?>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
+                        <?php
+                        $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
+                        while ($datensatz=mysqli_fetch_assoc($res_mieter))
+                        {
+                        "<td>".$datensatz["ID"]."</td>";
+                        "<td>".$datensatz["Nachname"]."</td>";
+                        "<td>".$datensatz["Vorname"]."</td>";
+                        "<td>".$datensatz["Strasse"]."</td>";
+                        "<td>".$datensatz["PLZ"]."</td>";
+                        "<td>".$datensatz["Ort"]."</td>";
+                        "<td>".$datensatz["Mietzins"]."</td>";
+                        "<td>".$datensatz["Periode"]."</td>";
+                        }
+                        ?>
+                    </tr>
 						<td><button class="btn btn-primary" type="button"> DEL </button>
 						<button class="btn btn-primary" type="button"> CHG </button></td>
                     </tr>
