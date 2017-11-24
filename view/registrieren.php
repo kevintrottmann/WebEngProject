@@ -15,8 +15,9 @@ include "db.connection.php";
 </head>
 
 <?php
- $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+$showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
  
+if(isset($_GET['register'])) {
  $error = false;
  $email = $_POST['email'];
  $passwort = $_POST['passwort'];
@@ -61,7 +62,7 @@ include "db.connection.php";
  echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
  }
  } 
-
+}
  
 if($showFormular) {
 ?>
