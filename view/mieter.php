@@ -40,7 +40,8 @@ include "db.connection.php"; ?>
                         echo "<td>".$datensatz["Liegenschaft"]."</td>";
                         echo "<td>".$datensatz["Mietzins"]."</td>";
                         echo "<td>".$datensatz["Periode"]."</td>";
-                        echo "<td><button class='btn btn-primary' type='button''> + Neuer Mieter </button></td>";
+                        echo "<td><a href=\"#\" class='btn btn-primary'> <span class='glyphicon glyphicon-pencil'></span></a></td>";
+      </p>;
                         }
                         ?>
 
