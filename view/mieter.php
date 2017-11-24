@@ -26,25 +26,25 @@ include "db.connection.php"; ?>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
                         <?php
                         $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
                         while ($datensatz=mysqli_fetch_assoc($res_mieter))
                         {
-                        "<td>".$datensatz["ID"]."</td>";
+
+                        "<tr><td>".$datensatz["ID"]."</td>";
                         "<td>".$datensatz["Nachname"]."</td>";
                         "<td>".$datensatz["Vorname"]."</td>";
                         "<td>".$datensatz["Strasse"]."</td>";
                         "<td>".$datensatz["PLZ"]."</td>";
                         "<td>".$datensatz["Ort"]."</td>";
                         "<td>".$datensatz["Mietzins"]."</td>";
-                        "<td>".$datensatz["Periode"]."</td>";
+                        "<td>".$datensatz["Periode"]."</td></tr>";
+                        //"<td>"<button class=\"btn btn-primary\" type=\"button\"> DEL </button><button class=\"btn btn-primary\" type=\"button\"> CHG </button>"</td></tr>";
                         }
                         ?>
-                    </tr>
-						<td><button class="btn btn-primary" type="button"> DEL </button>
-						<button class="btn btn-primary" type="button"> CHG </button></td>
-                    </tr>
+
+
+
                     <tr>
                         <td>Cell</td>
                         <td>Cell</td>
