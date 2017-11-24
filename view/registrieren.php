@@ -38,7 +38,7 @@ if(isset($_GET['register'])) {
  
  //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
  if(!$error) { 
- $statement = $link->prepare("SELECT * FROM users WHERE email = :email");
+ $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
  $result = $statement->execute(array('email' => $email));
  $user = $statement->fetch();
  
@@ -52,11 +52,11 @@ if(isset($_GET['register'])) {
  if(!$error) { 
  $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
  
- $statement = $link->prepare("INSERT INTO users (email, passwort) VALUES (:email, :passwort)");
+ $statement = $pdo->prepare("INSERT INTO users (email, passwort) VALUES (:email, :passwort)");
  $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
  
  if($result) { 
- echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+ header('Location: ./index.php');
  $showFormular = false;
  } else {
  echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
@@ -66,9 +66,10 @@ if(isset($_GET['register'])) {
  
 if($showFormular) {
 ?>
+
 <body style="background-color:rgb(97,100,102);">
     <div class="login-clean" style="background-color:rgb(97,100,102);">
-        <form  method="post">
+        <form action="?register=1" method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration">
                 <h1 style="color:rgb(244,164,71);">Registrierung</h1></div>
@@ -88,7 +89,7 @@ if($showFormular) {
                 <input class="form-control" type="passwort" name="passwort2" placeholder="Passwort wiederholen">
             </div>
             <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(244,175,71);">registrieren</button>
+                <button class="btn btn-primary btn-block" type="submit" onClick="www.photoca.se" style="background-color:rgb(244,175,71);">registrieren</button>
             </div>
 			</form>
     </div>
