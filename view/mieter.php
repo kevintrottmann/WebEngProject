@@ -46,7 +46,7 @@ include "db.connection.php"; ?>
                     ?>
                 </tbody>
             </table>
-			<button class="btn btn-primary" type="button"> + Neuer Mieter </button>
+			<a href="neuermieter.php" class="btn btn-primary" type="button"> Mieter erfassen </a>
 			</br>
 			</br>
 			</br>
