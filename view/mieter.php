@@ -29,6 +29,9 @@ include "db.connection.php"; ?>
                         <?php
                         $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
                         while ($datensatz=mysqli_fetch_assoc($res_mieter))
+
+                        echo $res_mieter;
+
                         {
 
                         "<tr><td>".$datensatz["ID"]."</td>";
@@ -42,25 +45,6 @@ include "db.connection.php"; ?>
                         //"<td>"<button class=\"btn btn-primary\" type=\"button\"> DEL </button><button class=\"btn btn-primary\" type=\"button\"> CHG </button>"</td></tr>";
                         }
                         ?>
-
-
-
-                    <tr>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-                    </tr>
-                    <tr>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-                    </tr>
                 </tbody>
             </table>
 			<button class="btn btn-primary" type="button"> + Neuer Mieter </button>
