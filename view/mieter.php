@@ -17,7 +17,8 @@ include "db.connection.php"; ?>
                         <th>Vorname</th>
                         <th>Nachname</th>
 						<th>Liegenschaft</th>
-						<th>Quadratmeter</th>
+						<th>Mietzins</th>
+                        <th>Periodizität</th>
 						<th>Optionen</th>
                     </tr>
                 </thead>
