@@ -31,36 +31,17 @@ include "db.connection.php"; ?>
                         while ($datensatz=mysqli_fetch_assoc($res_mieter))
                         {
 
-                        "<tr><td>".$datensatz["ID"]."</td>";
-                        "<td>".$datensatz["Nachname"]."</td>";
-                        "<td>".$datensatz["Vorname"]."</td>";
-                        "<td>".$datensatz["Strasse"]."</td>";
-                        "<td>".$datensatz["PLZ"]."</td>";
-                        "<td>".$datensatz["Ort"]."</td>";
-                        "<td>".$datensatz["Mietzins"]."</td>";
-                        "<td>".$datensatz["Periode"]."</td></tr>";
+                        echo "<tr><td>".$datensatz["ID"]."</td>";
+                        echo "<td>".$datensatz["Nachname"]."</td>";
+                        echo "<td>".$datensatz["Vorname"]."</td>";
+                        echo "<td>".$datensatz["Strasse"]."</td>";
+                        echo "<td>".$datensatz["PLZ"]."</td>";
+                        echo "<td>".$datensatz["Ort"]."</td>";
+                        echo "<td>".$datensatz["Mietzins"]."</td>";
+                        echo "<td>".$datensatz["Periode"]."</td></tr>";
                         //"<td>"<button class=\"btn btn-primary\" type=\"button\"> DEL </button><button class=\"btn btn-primary\" type=\"button\"> CHG </button>"</td></tr>";
                         }
                         ?>
-
-
-
-                    <tr>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-                    </tr>
-                    <tr>
-                        <td>Cell</td>
-                        <td>Cell</td>
-                        <td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-						<td>Cell</td>
-                    </tr>
                 </tbody>
             </table>
 			<button class="btn btn-primary" type="button"> + Neuer Mieter </button>
@@ -73,14 +54,14 @@ include "db.connection.php"; ?>
             while ($datensatz=mysqli_fetch_assoc($res_mieter))
             {
                 echo "<tr><td>".$datensatz["ID"]."</td>";
-                echo "<td>".$datensatz["Nachname"]."</td>";
-                echo "<td>".$datensatz["Vorname"]."</td>";
-                echo "<td>".$datensatz["Strasse"]."</td>";
-                echo "<td>".$datensatz["PLZ"]."</td>";
-                echo "<td>".$datensatz["Ort"]."</td>";
-                echo "<td>".$datensatz["Mietzins"]."</td>";
-                echo "<td>".$datensatz["Periode"]."</td></tr>";
-                echo "<br />";
+            echo "<td>".$datensatz["Nachname"]."</td>";
+            echo "<td>".$datensatz["Vorname"]."</td>";
+            echo "<td>".$datensatz["Strasse"]."</td>";
+            echo "<td>".$datensatz["PLZ"]."</td>";
+            echo "<td>".$datensatz["Ort"]."</td>";
+            echo "<td>".$datensatz["Mietzins"]."</td>";
+            echo "<td>".$datensatz["Periode"]."</td></tr>";
+            echo "<br />";
             }
 
 					?>
