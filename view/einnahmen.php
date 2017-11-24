@@ -8,7 +8,7 @@ include "db.connection.php"; ?>
 <body>
     <div class="container">
         <div class="page-header">
-            <h3>Willkommen auf Photoca.se</h3></div>
+            <h3>Einhahmen</h3></div>
         
         </div>
     </div>
