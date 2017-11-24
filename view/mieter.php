@@ -19,9 +19,9 @@ include "db.connection.php"; ?>
                         <th>Strasse</th>
                         <th>PLZ</th>
                         <th>Ort</th>
-						<th>Liegenschaft</th>
+						<th>Liegenschafts-Nr.</th>
 						<th>Mietzins</th>
-                        <th>Periode</th>
+                        <th>Periodizität</th>
 						<th>Optionen</th>
                     </tr>
                 </thead>
@@ -37,34 +37,21 @@ include "db.connection.php"; ?>
                         echo "<td>".$datensatz["Strasse"]."</td>";
                         echo "<td>".$datensatz["PLZ"]."</td>";
                         echo "<td>".$datensatz["Ort"]."</td>";
+                        echo "<td>".$datensatz["Liegenschaft"]."</td>";
                         echo "<td>".$datensatz["Mietzins"]."</td>";
-                        echo "<td>".$datensatz["Periode"]."</td></tr>";
-                        //"<td>"<button class=\"btn btn-primary\" type=\"button\"> DEL </button><button class=\"btn btn-primary\" type=\"button\"> CHG </button>"</td></tr>";
+                        echo "<td>".$datensatz["Periode"]."</td>";
+                        echo "<td><a href=\"#\" class='btn btn-primary'> <span class='glyphicon glyphicon-pencil'></span></a></td>";
+      </p>;
                         }
                         ?>
+
                 </tbody>
             </table>
 			<button class="btn btn-primary" type="button"> + Neuer Mieter </button>
 			</br>
 			</br>
 			</br>
-			<?php
 
-            $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
-            while ($datensatz=mysqli_fetch_assoc($res_mieter))
-            {
-                echo "<tr><td>".$datensatz["ID"]."</td>";
-            echo "<td>".$datensatz["Nachname"]."</td>";
-            echo "<td>".$datensatz["Vorname"]."</td>";
-            echo "<td>".$datensatz["Strasse"]."</td>";
-            echo "<td>".$datensatz["PLZ"]."</td>";
-            echo "<td>".$datensatz["Ort"]."</td>";
-            echo "<td>".$datensatz["Mietzins"]."</td>";
-            echo "<td>".$datensatz["Periode"]."</td></tr>";
-            echo "<br />";
-            }
-
-					?>
         </div>
     </div>
 </body>
