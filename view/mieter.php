@@ -22,7 +22,7 @@ include "db.connection.php"; ?>
 						<th>Liegenschafts-Nr.</th>
 						<th>Mietzins</th>
                         <th>Periodizität</th>
-						<th>Optionen</th>
+						<th>Bearbeiten</th>
                     </tr>
                 </thead>
 
