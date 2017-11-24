@@ -2,7 +2,7 @@
 include "db.connection.php";
 
 echo "Tabelle Users </br>";
-echo "<tr><td>id_user</td>\n";
+echo "<tr><td>id</td>\n";
 echo "<td>email</td>\n";
 echo "<td>passwort</td>\n";
 echo "<td>vorname</td>\n";
@@ -30,21 +30,27 @@ echo "<br />";
 }
 
 echo "</br></br> Tabelle Mieter </br>";
-echo "<tr><td>id</td>\n";
-echo "<td>name</td>\n";
-echo "<td>vorname</td>\n";
-echo "<td>mietzins</td>\n";
-echo "<td>liegenschaft</td></tr>\n";
+echo "<tr><td>ID</td>\n";
+echo "<td>Nachname</td>\n";
+echo "<td>Vorname</td>\n";
+echo "<td>Strasse</td>\n";
+echo "<td>PLZ</td>\n";
+echo "<td>Ort</td>\n";
+echo "<td>Mietzins</td>\n";
+echo "<td>Periode</td></tr>\n";
 echo "<br />";
 
 $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
 while ($datensatz=mysqli_fetch_assoc($res_mieter))
 {
-echo "<tr><td>".$datensatz["id"]."</td>";
-echo "<td>".$datensatz["name"]."</td>";
-echo "<td>".$datensatz["vorname"]."</td>";
-echo "<td>".$datensatz["mietzins"]."</td>";
-echo "<td>".$datensatz["liegenschaft"]."</td></tr>";
+echo "<tr><td>".$datensatz["ID"]."</td>";
+echo "<td>".$datensatz["Nachname"]."</td>";
+echo "<td>".$datensatz["Vorname"]."</td>";
+echo "<td>".$datensatz["Strasse"]."</td>";
+echo "<td>".$datensatz["PLZ"]."</td>";
+echo "<td>".$datensatz["Ort"]."</td>";
+echo "<td>".$datensatz["Mietzins"]."</td>";
+echo "<td>".$datensatz["Periode"]."</td></tr>";
 echo "<br />";
 }
 
