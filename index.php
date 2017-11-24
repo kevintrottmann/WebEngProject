@@ -1,25 +1,5 @@
-<?php
-session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=db_photocase', 'db_root', 'aVu8k&13');
- 
-if(isset($_GET['login'])) {
- $email = $_POST['email'];
- $passwort = $_POST['passwort'];
- 
- $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
- $result = $statement->execute(array('email' => $email));
- $user = $statement->fetch();
- 
- //Überprüfung des Passworts
- if ($user !== false && password_verify($passwort, $user['passwort'])) {
- $_SESSION['userid'] = $user['id'];
- die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
- } else {
- $errorMessage = "E-Mail oder Passwort war ungültig<br>";
- }
- 
-}
-?><!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -34,14 +14,8 @@ if(isset($_GET['login'])) {
 
 <body style="background-color:rgb(97,100,102);">
 
-<?php 
-if(isset($errorMessage)) {
- echo $errorMessage;
-}
-?>
-
     <div class="login-clean" style="background-color:rgb(97,100,102);">
-        <form action="?login=1" method="post">
+        <form method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration">
                 <h1 style="color:rgb(244,164,71);">Login</h1></div>
