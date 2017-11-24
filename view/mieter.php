@@ -28,9 +28,10 @@ include "db.connection.php"; ?>
                 <tbody>
                         <?php
                         $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
+                        echo $res_mieter;
                         while ($datensatz=mysqli_fetch_assoc($res_mieter))
 
-                        echo $res_mieter;
+
 
                         {
 
