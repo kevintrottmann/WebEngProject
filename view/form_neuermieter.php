@@ -13,7 +13,7 @@ include "db.connection.php"; ?>
     </div>
 
     <div class="container">
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="db_add_mieter.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="vorname">Vorname:</label>
                 <div class="col-sm-10">
@@ -64,47 +64,20 @@ include "db.connection.php"; ?>
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-2" for="periodizität">Periodizität:</label>
+                <label class="control-label col-sm-2" for="periode">Periodizität:</label>
                 <div class="col-sm-10">
-                    <input type="periodizität" class="form-control" id="periodizität" placeholder="jährlich [j] - monatlich [m]">
+                    <input type="periode" class="form-control" id="periode" placeholder="jährlich [j] - monatlich [m]">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary" onclick="submit()">Erfassen</button>
+                    <button type="submit" class="btn btn-primary">Erfassen</button>
                 </div>
             </div>
         </form>
     </div>
-
-
-    <div>
-    <?php
-        function submit(){
-            $vorname = mysqli_real_escape_string($link, $_REQUEST['vorname']);
-            $nachname = mysqli_real_escape_string($link, $_REQUEST['nachname']);
-            $strasse = mysqli_real_escape_string($link, $_REQUEST['strasse']);
-            $plz = mysqli_real_escape_string($link, $_REQUEST['plz']);
-            $ort = mysqli_real_escape_string($link, $_REQUEST['ort']);
-            $liegenschaft = mysqli_real_escape_string($link, $_REQUEST['liegenschaft']);
-            $mietzins = mysqli_real_escape_string($link, $_REQUEST['ort']);
-            $periodizitaet = mysqli_real_escape_string($link, $_REQUEST['periodizitaet']);
-
-            echo $vorname;
-            echo $nachname;
-            echo $strasse;
-            echo $plz;
-            echo $ort;
-            echo $liegenschaft;
-            echo $mietzins;
-            echo $periodizitaet;
-
-        }
-    ?>
-    </div>
 </body>
 
 <?php include "footer.php"; ?> 
-
 </html>
