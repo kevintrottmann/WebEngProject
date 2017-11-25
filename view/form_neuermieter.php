@@ -13,7 +13,7 @@ include "db.connection.php"; ?>
     </div>
 
     <div class="container">
-        <form class="form-horizontal" action="?erfassen=1" method="post">
+        <form class="form-horizontal" action="add_mieter.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="vorname">Vorname:</label>
                 <div class="col-sm-10">
@@ -77,49 +77,7 @@ include "db.connection.php"; ?>
             </div>
         </form>
     </div>
-
-
-    <div>
-    <?php
-    if(isset($_GET['erfassen'])) {
-        $error = false;
-        $vorname = $_POST['vorname'];
-        $nachname = $_POST['nachname'];
-        $strasse = $_POST['strasse'];
-        $plz = $_POST['plz'];
-        $ort = $_POST['ort'];
-        $liegenschaft = $_POST['liegenschaft'];
-        $mietzins = $_POST['mietzins'];
-        $periode = $_POST['periode'];
-
-        //Überprüfung, ob Formular korrekte Werte enthält
-
-
-
-
-        //Überprüfung, ob Mieter bereits in Datenbank erfasst
-        
-
-        //Keine Fehler, wir k�nnen den Nutzer registrieren
-        if(!$error) {
-            $addsql = "INSERT INTO mieter (Vorname,Nachname,Strasse,PLZ,Ort,Liegenschaft,Mietzins,Periode) VALUES ('".$vorname."','".$nachname."','".$strasse."','".$plz."','".$ort."','".$liegenschaft."','".$mietzins."','".$periode."')";
-            $eintragen = mysqli_query($link,$addsql);
-
-            echo $addsql;
-
-
-            if($result) {
-                echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
-                $showFormular = false;
-            } else {
-                echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
-            }
-
-    }
-    ?>
-    </div>
 </body>
 
 <?php include "footer.php"; ?> 
-
 </html>
