@@ -2,7 +2,17 @@
 <html>
 
 <?php include "header.php"; 
-include "db.connection.php"; ?>
+include "db.connection.php"; 
+
+if(!isset($_SESSION['userid'])) {
+echo $_SESSION['userid'];
+//echo "<script type='text/javascript'>window.document.location.href ='../index.php';</script>";
+}
+ 
+//Abfrage der Nutzer ID vom Login
+$userid = $_SESSION['userid'];
+ 
+?>
  
 
 <body>

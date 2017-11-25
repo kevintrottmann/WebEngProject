@@ -1,12 +1,11 @@
 <?php
 
 include ("view/db.connection.login.php");
-include ("view/db.connection.php");
 
 if(isset($_GET['login'])) {
  $email = $_POST['email'];
  $passwort = $_POST['passwort'];
- // $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
+ //$passwort = password_hash($passwort, PASSWORD_DEFAULT);
  
  $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
  $result = $statement->execute(array('email' => $email));
