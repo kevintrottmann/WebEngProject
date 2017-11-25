@@ -13,7 +13,7 @@ include "db.connection.php"; ?>
     </div>
 
     <div class="container">
-        <form class="form-horizontal" action="add_mieter.php" method="post">
+        <form class="form-horizontal" action="db_add_mieter.php" method="post">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="vorname">Vorname:</label>
                 <div class="col-sm-10">
