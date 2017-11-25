@@ -9,46 +9,7 @@
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 	
-	<script type="text/javascript">
-	function mySubmit() 
-	{
-	if(document.formular.benutzername.value == "") {
-    alert("Bitte tragen Sie Ihren Benutzername (Kontaktperson) ein!");
-    document.formular.benutzername.focus();
-    return false;
-    }
-	if(document.formular.passwort1.value == "") {
-    alert("Bitte geben sie ein Passwort ein!");
-    document.formular.passwort1.focus();
-    return false;
-    }
-	if(document.formular.passwort2.value == "") {
-    alert("Bitte geben sie das Passwort zweimal ein - zur Kontrolle!");
-    document.formular.passwort2.focus();
-    return false;
-    }
-    if(document.formular.passwort1.value.length < 8) {
-    alert("Bitte geben sie ein Passwort mit mindestens 8 Zeichen ein!")
-    document.formular.passwort1.focus();
-    return false;
-    }
-    var nr_length = document.formular.passwort1.value.replace(/[^0-9]/g, '').length;
-    if(nr_length < 1){
-    alert("Passwort muss mind. 1 Zahl haben !")
-    document.formular.passwort1.focus();
-    return false;
-    }    
-    if (document.formular.passwort1.value == document.formular.passwort2.value)
-      { 
-	  return true; 
-	  }
-	else
-	  {  
-	  alert("Passwörter sind nicht identisch");
-	  return false; 
-	  }
-	}
-    </script>
+
 </head>
 
 <body style="background-color:rgb(97,100,102);">
