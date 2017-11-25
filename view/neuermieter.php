@@ -75,13 +75,8 @@ include "db.connection.php"; ?>
                     <button type="submit" class="btn btn-primary" onclick="submit()">Erfassen</button>
                 </div>
             </div>
-        </form>
-    </div>
 
-
-    <div>
-    <?php
-        function submit(){
+            <?php
             $vorname = mysqli_real_escape_string($link, $_REQUEST['vorname']);
             $nachname = mysqli_real_escape_string($link, $_REQUEST['nachname']);
             $strasse = mysqli_real_escape_string($link, $_REQUEST['strasse']);
@@ -91,6 +86,15 @@ include "db.connection.php"; ?>
             $mietzins = mysqli_real_escape_string($link, $_REQUEST['ort']);
             $periodizitaet = mysqli_real_escape_string($link, $_REQUEST['periodizitaet']);
 
+
+            ?>
+        </form>
+    </div>
+
+
+    <div>
+    <?php
+        function submit(){
             echo $vorname;
             echo $nachname;
             echo $strasse;
@@ -99,6 +103,7 @@ include "db.connection.php"; ?>
             echo $liegenschaft;
             echo $mietzins;
             echo $periodizitaet;
+
 
         }
     ?>
