@@ -28,7 +28,7 @@
                 </thead>
 
                 <tbody>
-					<form action="db_del_mieter.php" method="post">
+					
                     <?php
 							
                         $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
@@ -43,8 +43,8 @@
                             echo "<td>" . $datensatz["Liegenschaft"] . "</td>";
                             echo "<td>" . $datensatz["Mietzins"] . "</td>";
                             echo "<td>" . $datensatz["Periode"] . "</td>";
-                            echo "<td><input type='submit' btn class='btn btn-primary' id='changebtn' name='.$datensatz.ID.' value='change'><span class='glyphicon glyphicon-pencil'></span></btn>
-                                      <input type='submit' btn class='btn btn-primary' id='deletebtn' name='.$datensatz.ID.' value='delete'><span class='glyphicon glyphicon-remove-circle'></span></btn></td></tr>";
+                            echo "<td><btn class='btn btn-primary' id='changebtn' name='.$datensatz.ID.'><span class='glyphicon glyphicon-pencil'></span></btn>
+                                      <btn class='btn btn-primary' id='deletebtn' name='.$datensatz.ID.'><span class='glyphicon glyphicon-remove-circle'></span></btn></td></tr>";
                         }
                     ?>
 					</form>
