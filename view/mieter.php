@@ -28,7 +28,9 @@
                 </thead>
 
                 <tbody>
+					<form action="db_del_mieter.php" method="post">
                     <?php
+							
                         $res_mieter=mysqli_query($link,"SELECT * FROM mieter");
                         while ($datensatz=mysqli_fetch_assoc($res_mieter)) {
 
@@ -41,10 +43,11 @@
                             echo "<td>" . $datensatz["Liegenschaft"] . "</td>";
                             echo "<td>" . $datensatz["Mietzins"] . "</td>";
                             echo "<td>" . $datensatz["Periode"] . "</td>";
-                            echo "<td><btn class='btn btn-primary' id='changebtn' name='.$datensatz.ID.'><span class='glyphicon glyphicon-pencil'></span></btn>
+                            echo "<td><btn class='btn btn-primary' id='changebtn' name='.$datensatz.ID.' value='delete'><span class='glyphicon glyphicon-pencil'></span></btn>
                                     <btn class='btn btn-primary' id='deletebtn' name='.$datensatz.ID.'><span class='glyphicon glyphicon-remove-circle'></span></btn></td></tr>";
                         }
                     ?>
+					</form>
                 </tbody>
             </table>
 			<a href="form_neuermieter.php" class="btn btn-primary" type="button"> Mieter erfassen </a>
