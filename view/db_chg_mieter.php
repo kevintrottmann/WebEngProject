@@ -25,9 +25,9 @@
     <div class="container">
         <form class="form-horizontal" name="mieterform" action="db_chg_mieter_value.php" method="post">
             <div class="form-group">
-                <label class="control-label col-sm-2" for="vorname">Mieter_ID:</label>
+                <label class="control-label col-sm-2" for="id">Mieter_ID:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="id" value="<?php echo $datensatz["ID"]; ?>" disabled="disabled">
+                    <input type="id" class="form-control" name="id" value="<?php echo $datensatz["ID"]; ?>" readonly>
                 </div>
             </div>
 			<div class="form-group">

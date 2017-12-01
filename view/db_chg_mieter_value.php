@@ -2,8 +2,8 @@
     include "db.connection.php";
 
 
-        $error=false;
-		$ID = $_POST['id'];
+        
+		$id = $_POST['id'];
         $vorname = $_POST['vorname'];
         $nachname = $_POST['nachname'];
         $strasse = $_POST['strasse'];
@@ -25,7 +25,7 @@
         
         $chgsql = "UPDATE `mieter` SET `Nachname` = '".$nachname."', `Vorname` = '".$vorname."', `Strasse` = '".$strasse."', `PLZ` = '".$plz."', `Ort` = '".$ort."', `Liegenschaft` = '".$liegenschaft."', `Mietzins` = '".$mietzins."', `Periode` = '".$periode."' WHERE `mieter`.`ID` = '".$id."'";
 		$eintragen = mysqli_query($link,$chgsql);
-		echo $chgsql;
+	
 		
-    //echo '<script>window.location.href = "mieter.php";</script>';
+    echo '<script>window.location.href = "mieter.php";</script>';
 ?>
