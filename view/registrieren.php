@@ -1,8 +1,6 @@
 <?php 
-session_start();
-include "db.connection.php";
+include "db.connection.login.php"; 
 ?>
-
 <!DOCTYPE html> 
 <html> 
 <head>
@@ -14,13 +12,18 @@ include "db.connection.php";
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<?php
- $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+<body style="background-color:rgb(97,100,102);">
  
+<?php
+$showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+ 
+if(isset($_GET['register'])) {
  $error = false;
  $email = $_POST['email'];
  $passwort = $_POST['passwort'];
  $passwort2 = $_POST['passwort2'];
+ $vorname= $_POST['vorname'];
+ $nachname= $_POST['nachname'];
   
  if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
  echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
@@ -37,37 +40,37 @@ include "db.connection.php";
  
  //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
  if(!$error) { 
- $statement = $link->prepare("SELECT * FROM users WHERE email = :email");
+ $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
  $result = $statement->execute(array('email' => $email));
  $user = $statement->fetch();
  
  if($user !== false) {
- echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+ echo "alert('Diese E-Mail-Adresse ist bereits vergeben')";
  $error = true;
  } 
  }
  
  //Keine Fehler, wir können den Nutzer registrieren
  if(!$error) { 
- $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
+ //$passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
  
- $statement = $link->prepare("INSERT INTO users (email, passwort) VALUES (:email, :passwort)");
- $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
+ $statement = $pdo->prepare("INSERT INTO users (email, passwort,vorname,nachname) VALUES (:email, :passwort, :vorname, :nachname)");
+ $result = $statement->execute(array('email' => $email, 'passwort' => $passwort, 'vorname' => $vorname,'nachname' => $nachname, ));
  
  if($result) { 
- echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+ echo 'Du wurdest erfolgreich registriert. <a href="./index.php">Zum Login</a>';
  $showFormular = false;
  } else {
- echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+ echo "alert('Beim Abspeichern ist leider ein Fehler aufgetreten')";
  }
  } 
-
+}
  
 if($showFormular) {
 ?>
-<body style="background-color:rgb(97,100,102);">
-    <div class="login-clean" style="background-color:rgb(97,100,102);">
-        <form  method="post">
+ 
+<div class="login-clean" style="background-color:rgb(97,100,102);">
+        <form action="?register=1" method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration">
                 <h1 style="color:rgb(244,164,71);">Registrierung</h1></div>
@@ -81,13 +84,13 @@ if($showFormular) {
                 <input class="form-control" type="email" name="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <input class="form-control" type="passwort" name="passwort" placeholder="Passwort">
+                <input class="form-control" type="password" name="passwort" placeholder="Passwort">
             </div>
 			<div class="form-group">
-                <input class="form-control" type="passwort" name="passwort2" placeholder="Passwort wiederholen">
+                <input class="form-control" type="password" name="passwort2" placeholder="Passwort wiederholen">
             </div>
             <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(244,175,71);">registrieren</button>
+                <button class="btn btn-primary btn-block" type="submit" onClick="www.photoca.se" style="background-color:rgb(244,175,71);">registrieren</button>
             </div>
 			</form>
     </div>
