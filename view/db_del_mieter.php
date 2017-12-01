@@ -1,20 +1,12 @@
 <?php
     include "db.connection.php";
 	
-	$ID=$_POST['ID'];
-	echo("ID: $ID");
-	echo("</br>");
-	$action=$_POST['action'];
-	echo("Action: $action");
-	echo("</br>");
-	$button = array_search('delete', $_POST);
-	echo("Button: $button");
 	
-    //$row_id = $_POST['name'];
+	$id_buchungen=$_POST['ID'];
+	echo("ID: $id_buchungen");
 
-    //Keine Fehler, wir k�nnen den Nutzer registrieren
-    //$addsql = "DELETE FROM mieter WHERE ID='$row_id';
-    //$eintragen = mysqli_query($link,$addsql);
+    $delsql =mysqli_query($link,"DELETE FROM mieter WHERE ID='$id_buchungen'");
+    $eintragen = mysqli_query($link,$delsql);
 
-    //echo '<script>window.location.href = "mieter.php";</script>';
+    echo "<script>window.location.href ='mieter.php';</script>";
 ?>
