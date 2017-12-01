@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="73bd2b53-322b-4088-b50a-ef1b1f90ac05" name="photoca" url="http://heine.metanet.ch">
+        <fileTransfer host="heine.metanet.ch" port="8443">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="8443" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['userid'])) {
- die('Bitte zuerst <a href="login.php">einloggen</a>');
+echo "<script type='text/javascript'>window.document.location.href ='../index.php';</script>";
 }
  
 //Abfrage der Nutzer ID vom Login
