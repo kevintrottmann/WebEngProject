@@ -43,7 +43,7 @@
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-2" for="rechnungstext">Rechnungstext:</label>
+                <label class="control-label col-sm-2" for="rechnungstext">Rechnungstext (max. 200 Zeichen):</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="rechnungstext" placeholder="Rechnungstext eingeben">
                 </div>

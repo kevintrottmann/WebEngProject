@@ -15,7 +15,7 @@ include "db.connection.php"; ?>
                 <thead>
                     <tr>
                         <th>Einnahmen ID</th>
-                        <th>Nachname / Vorname</th>
+                        <th>Vorname / Nachname</th>
                         <th>Datum</th>
                         <th>Betrag</th>
                         <th>Löschen</th>
@@ -30,7 +30,12 @@ include "db.connection.php"; ?>
                         while ($datensatz=mysqli_fetch_assoc($res_einnahmen)){
 
                             echo "<tr><td>".$datensatz["ID"]."</td>";
-                            echo "<td>".$datensatz["ID_Mieter"]."</td>";
+                            echo "<td>";
+							$id_mieter = $datensatz["ID_Mieter"];
+							$res_mieter=mysqli_query($link,"SELECT * FROM mieter WHERE ID='$id_mieter'");
+							$datensatz1=mysqli_fetch_assoc($res_mieter);
+							echo $datensatz1["Vorname"]." ".$datensatz1["Nachname"];
+							echo "</td>";
                             echo "<td>".$datensatz["Datum"]."</td>";
                             echo "<td>".$datensatz["Betrag"]."</td>";
                             echo "<td><form action='db_del_einnahme.php' method='POST'/><input type='submit' class='btn btn-primary' name='löschen' value='DEL'> <input type='hidden' name='ID' value='". $datensatz["ID"] ."'></form></td>";
