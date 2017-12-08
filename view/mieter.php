@@ -6,7 +6,7 @@ include "db.connection.php"; ?>
  
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="page-header">
             <h3>Mieter</h3></div>
         <div class="table-responsive">

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<?php
+    include "header.php";
+    include "db.connection.php";
+?>
+
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h3>Neue Rechnung erfassen</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <form class="form-horizontal" name="mieterform" action="db_add_rechnung.php" method="post">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="typ">Typ:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="typ" placeholder="Typ auswählen">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="art">Art:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="art" placeholder="Art auswählen">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="rechnungstext">Rechnungstext:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="rechnungstext" placeholder="Rechnungstext eingeben">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="datum">Datum:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" name="datum" placeholder="Datum auswählen">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="betrag">Betrag:</label>
+                <div class="col-sm-10">
+                    <input type="number_format" class="form-control" name="betrag" placeholder="Betrag eingeben">
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Erfassen</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<?php include "footer.php"; ?> 
+</html>
