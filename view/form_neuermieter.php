@@ -65,12 +65,6 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="periode">Periodizität:</label>
-                <div class="col-sm-10">
-                    <input type="periode" class="form-control" name="periode" placeholder="jährlich [j] - monatlich [m]">
-                </div>
-            </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">

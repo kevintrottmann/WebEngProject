@@ -21,7 +21,6 @@ include "db.connection.php"; ?>
                         <th>Ort</th>
 						<th>Liegenschafts-Nr.</th>
 						<th>Mietzins</th>
-                        <th>Periodizität</th>
 						<th>Löschen</th>
 						<th>Bearbeiten</th>
                     </tr>
@@ -40,7 +39,6 @@ include "db.connection.php"; ?>
                             echo "<td>".$datensatz["Ort"]."</td>";
                             echo "<td>".$datensatz["Liegenschaft"]."</td>";
                             echo "<td>".$datensatz["Mietzins"]."</td>";
-                            echo "<td>".$datensatz["Periode"]."</td>";
                             echo "<td><form action='db_del_mieter.php' method='POST'/><input type='submit' class='btn btn-primary' name='löschen' value='DEL'> <input type='hidden' name='ID' value='". $datensatz["ID"] ."'></form></td>";
 							echo "<td><form action='db_chg_mieter.php' method='POST'/><input type='submit' class='btn btn-primary' name='bearbeiten' value='CHG'> <input type='hidden' name='ID' value='". $datensatz["ID"] ."'></form></td></tr>";
                           

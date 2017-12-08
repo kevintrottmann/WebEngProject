@@ -17,10 +17,25 @@
     <div class="container">
         <form class="form-horizontal" name="mieterform" action="db_add_einnahme.php" method="post">
             <div class="form-group">
-                <label class="control-label col-sm-2" for="id">ID_Mieter:</label>
+                <label class="control-label col-sm-2" for="id">Mieter:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="id" placeholder="Mieter auswählen">
-                </div>
+                   <!--  <input type="text" class="form-control" name="id" placeholder="Mieter auswählen"> -->
+					<select name="id" style="height:40px;width:220px;font-size:20px;">
+					
+					<?php 
+					$res_mieter=mysqli_query($link,"SELECT * FROM mieter");
+                     while ($datensatz=mysqli_fetch_assoc($res_mieter)){
+
+							echo '<option value=';
+							echo $datensatz["ID"];
+							echo '>';
+							echo $datensatz["Vorname"].' '; 
+							echo $datensatz["Nachname"];
+							echo '</option>';  
+					}
+					?>
+					</select>
+				</div>
             </div>
 
             <div class="form-group">
@@ -46,6 +61,5 @@
         </form>
     </div>
 </body>
-
 <?php include "footer.php"; ?> 
 </html>

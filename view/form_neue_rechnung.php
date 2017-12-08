@@ -19,15 +19,27 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="typ">Typ:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="typ" placeholder="Typ auswählen">
-                </div>
+                    <!-- <input type="text" class="form-control" name="typ" placeholder="Typ auswählen">-->
+				<select name="typ" style="height:42px;width:220px;font-size:20px;">
+					<option value="Heizkosten">Heizkosten</option>
+					<option value="Nebenkosten">Nebenkosten</option>
+				</select>
+				
+				</div>
             </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="art">Art:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="art" placeholder="Art auswählen">
-                </div>
+                   <!--  <input type="text" class="form-control" name="art" placeholder="Art auswählen">-->
+					<select name="art" style="height:40px;width:220px;font-size:20px;">
+						<option value="Reparaturrechnung">Reparaturrechnung</option>
+						<option value="Oelrechnung">Oelrechnung</option>
+						<option value="Wasserrechnung">Wasserrechnung</option>
+						<option value="Stromrechnung">Stromrechnung</option>
+						<option value="Hauswartsrechnung">Hauswartsrechnung</option>
+					</select>
+				</div>
             </div>
 
             <div class="form-group">

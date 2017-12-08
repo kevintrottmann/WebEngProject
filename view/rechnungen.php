@@ -20,7 +20,8 @@ include "db.connection.php"; ?>
                         <th>Rechnungstext</th>
                         <th>Datum</th>
                         <th>Betrag</th>
-						<th>Optionen</th>
+						<th>Löschen</th>
+						<th>Bearbeiten</th>
                     </tr>
                 </thead>
 

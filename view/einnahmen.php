@@ -18,7 +18,8 @@ include "db.connection.php"; ?>
                         <th>Nachname / Vorname</th>
                         <th>Datum</th>
                         <th>Betrag</th>
-                        <th>Optionen</th>
+                        <th>Löschen</th>
+						<th>Bearbeiten</th>
                         
                     </tr>
                 </thead>

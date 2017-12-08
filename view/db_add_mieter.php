@@ -10,7 +10,6 @@
         $ort = $_POST['ort'];
         $liegenschaft = $_POST['liegenschaft'];
         $mietzins = $_POST['mietzins'];
-        $periode = $_POST['periode'];
 
     //Überprüfung, ob Formular korrekte Werte enthält
 
@@ -21,7 +20,7 @@
 
 
     //Keine Fehler, wir k�nnen den Nutzer registrieren
-        $addsql = "INSERT INTO mieter (Vorname,Nachname,Strasse,PLZ,Ort,Liegenschaft,Mietzins,Periode) VALUES ('".$vorname."','".$nachname."','".$strasse."','".$plz."','".$ort."','".$liegenschaft."','".$mietzins."','".$periode."')";
+        $addsql = "INSERT INTO mieter (Vorname,Nachname,Strasse,PLZ,Ort,Liegenschaft,Mietzins) VALUES ('".$vorname."','".$nachname."','".$strasse."','".$plz."','".$ort."','".$liegenschaft."','".$mietzins."')";
         $eintragen = mysqli_query($link,$addsql);
 
     echo '<script>window.location.href = "mieter.php";</script>';

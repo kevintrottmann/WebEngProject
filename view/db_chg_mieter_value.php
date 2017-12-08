@@ -11,7 +11,6 @@
         $ort = $_POST['ort'];
         $liegenschaft = $_POST['liegenschaft'];
         $mietzins = $_POST['mietzins'];
-        $periode = $_POST['periode'];
 
     //Überprüfung, ob Formular korrekte Werte enthält
 
@@ -23,7 +22,7 @@
 
     //Keine Fehler, wir k�nnen den Nutzer registrieren
         
-        $chgsql = "UPDATE `mieter` SET `Nachname` = '".$nachname."', `Vorname` = '".$vorname."', `Strasse` = '".$strasse."', `PLZ` = '".$plz."', `Ort` = '".$ort."', `Liegenschaft` = '".$liegenschaft."', `Mietzins` = '".$mietzins."', `Periode` = '".$periode."' WHERE `mieter`.`ID` = '".$id."'";
+        $chgsql = "UPDATE `mieter` SET `Nachname` = '".$nachname."', `Vorname` = '".$vorname."', `Strasse` = '".$strasse."', `PLZ` = '".$plz."', `Ort` = '".$ort."', `Liegenschaft` = '".$liegenschaft."', `Mietzins` = '".$mietzins."' WHERE `mieter`.`ID` = '".$id."'";
 		$eintragen = mysqli_query($link,$chgsql);
 	
 		

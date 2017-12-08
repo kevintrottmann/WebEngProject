@@ -3,7 +3,7 @@
 
 
         $error=false;
-        $id = $_POST['id'];
+        $id = intval($_POST['id']);
         $datum = $_POST['datum'];
         $betrag = $_POST['betrag'];
         
