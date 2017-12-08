@@ -14,8 +14,8 @@ include "db.connection.php"; ?>
                 <thead>
                     <tr>
                         <th>Mieter ID</th>
-                        <th>Vorname</th>
                         <th>Nachname</th>
+                        <th>Vorname</th>
                         <th>Strasse</th>
                         <th>PLZ</th>
                         <th>Ort</th>

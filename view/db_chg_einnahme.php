@@ -5,10 +5,10 @@
     include "header.php";
     include "db.connection.php";
 	
-	$id_rechnung=$_POST['ID'];
+	$id_einnahme=$_POST['ID'];
 	
-	$chg_rechnung =mysqli_query($link,"SELECT * FROM rechnungen WHERE ID='$id_rechnung'");
-	$datensatz=mysqli_fetch_assoc($chg_rechnung);
+	$chg_einnahme =mysqli_query($link,"SELECT * FROM einnahmen WHERE ID='$id_einnahme'");
+	$datensatz=mysqli_fetch_assoc($chg_einnahme);
 	
 	
 	
@@ -18,36 +18,22 @@
 <body>
     <div class="container">
         <div class="page-header">
-            <h3> Rechnung bearbeiten</h3>
+            <h3> Einnahme bearbeiten</h3>
         </div>
     </div>
 
     <div class="container">
-        <form class="form-horizontal" name="mieterform" action="db_chg_rechnung_value.php" method="post">
+        <form class="form-horizontal" name="mieterform" action="db_chg_einnahme_value.php" method="post">
             <div class="form-group">
-                <label class="control-label col-sm-2" for="id">Rechnungs_ID:</label>
+                <label class="control-label col-sm-2" for="id">Einnahme_ID:</label>
                 <div class="col-sm-10">
                     <input type="id" class="form-control" name="id" value="<?php echo $datensatz["ID"]; ?>" readonly>
                 </div>
             </div>
 			<div class="form-group">
-                <label class="control-label col-sm-2" for="typ">Typ:</label>
+                <label class="control-label col-sm-2" for="mieter">Mieter_ID:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="typ" value="<?php echo $datensatz["Typ"]; ?>">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="art">Art:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="art" value="<?php echo $datensatz["Art"]; ?>">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="rechnungstext">Rechnungstext:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="rechnungstext" value="<?php echo $datensatz["Rechnungstext"]; ?>">
+                    <input type="text" class="form-control" name="mieter" value="<?php echo $datensatz["ID_Mieter"]; ?>">
                 </div>
             </div>
 
@@ -65,11 +51,9 @@
                 </div>
             </div>
 
-        
-
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary" onclick="checkform()">Rechnung speichern</button>
+                    <button type="submit" class="btn btn-primary" onclick="checkform()">Einnahme speichern</button>
                 </div>
             </div>
         </form>
