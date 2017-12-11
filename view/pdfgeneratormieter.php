@@ -58,7 +58,7 @@ class PDF extends FPDF
     {
         $this->SetFont('Arial','B',20);
         $this->Ln(5);
-        $this->Cell(0,0,'Abrechnung',0,0,'C');
+        $this->Cell(0,0,'Mieter',0,0,'C');
         $this->Ln(20);
     }
 

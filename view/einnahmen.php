@@ -40,13 +40,12 @@ include "db.connection.php"; ?>
                             echo "<td>".$datensatz["Betrag"]."</td>";
                             echo "<td><form action='db_del_einnahme.php' method='POST'/><input type='submit' class='btn btn-primary' name='löschen' value='DEL'> <input type='hidden' name='ID' value='". $datensatz["ID"] ."'></form></td>";
 							echo "<td><form action='db_chg_einnahme.php' method='POST'/><input type='submit' class='btn btn-primary' name='bearbeiten' value='CHG'> <input type='hidden' name='ID' value='". $datensatz["ID"] ."'></form></td></tr>";
-                          
 							
 							}
                     ?>
                 </tbody>
             </table>
-			<a href="form_neue_einnahme.php" class="btn btn-primary" type="button"> Einnahmen erfassen </a>
+			<a href="form_neue_einnahme.php" class="btn btn-primary" type="button"> Einnahmen erfassen </a> <a href="pdfgeneratoreinnahmen.php" target="_blank" class="btn btn-primary">Drucken</a>
 			</br>
 			</br>
 			</br>

@@ -44,8 +44,9 @@ include "db.connection.php"; ?>
                     ?>
                 </tbody>
             </table>
-			<a href="form_neue_rechnung.php" class="btn btn-primary" type="button"> Rechnung erfassen </a>
-			</br>
+			<a href="form_neue_rechnung.php" class="btn btn-primary" type="button"> Rechnung erfassen </a> <a href="pdfgeneratorrechnung.php" target="_blank" class="btn btn-primary">Drucken</a>
+
+                </br>
 			</br>
 			</br>
         

@@ -47,8 +47,9 @@ include "db.connection.php"; ?>
                     ?>
                 </tbody>
             </table>
-			<a href="form_neuermieter.php" class="btn btn-primary" type="button"> Mieter erfassen </a>
-			</br>
+			<a href="form_neuermieter.php" class="btn btn-primary" type="button"> Mieter erfassen </a> <a href="pdfgeneratormieter.php" target="_blank" class="btn btn-primary">Drucken</a>
+
+            </br>
 			</br>
 			</br>
 
