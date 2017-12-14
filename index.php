@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include ("view/db.connection.login.php");
 include ("view/db.connection.php");

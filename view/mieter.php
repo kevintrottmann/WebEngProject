@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<?php include "header.php"; 
-include "db.connection.php"; ?>
+<?php
+    include "authorized.php";
+    include "header.php";
+    include "db.connection.php";
+?>
  
 
 <body>
