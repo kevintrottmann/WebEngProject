@@ -1,5 +1,5 @@
 <?php
     if(!isset($_SESSION['userid'])){
-        header("location:index.php");
+        header("location:http://photoca.se/index.php");
     }
 ?>
