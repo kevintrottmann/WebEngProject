@@ -1,8 +1,15 @@
+<?php
+print_r($_SESSION);
+if(!isset($_SESSION['userid'])){
+    header("location:index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <?php
-    include "authorized.php";
+    //include "authorized.php";
     include "header.php";
     include "db.connection.php";
 ?>
