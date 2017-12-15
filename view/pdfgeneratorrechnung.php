@@ -43,17 +43,31 @@ class PDF extends FPDF
             $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
         $this->Ln();
 
+        $this->SetFillColor(224,235,255);
         $this->SetTextColor(0,0,0);
+        $this->SetFont('');
 
+
+        $fill = false;
         foreach($data as $row)
         {
-            foreach($row as $col)
-                $this->Cell(45,6,$col,1,0 ,'C');
 
+            $this->Cell($w[0],6,$row[0],'LR',0,'L',$fill);
+            $this->Cell($w[1],6,$row[1],'LR',0,'L',$fill);
+            $this->Cell($w[2],6,$row[2],'LR',0,'R',$fill);
+            $this->Cell($w[3],6,$row[3],'LR',0,'R',$fill);
+            $this->Cell($w[4],6,$row[4],'LR',0,'R',$fill);
+            $this->Cell($w[5],6,$row[5],'LR',0,'R',$fill);
             $this->Ln();
+            $fill = !$fill;
+
         }
 
+
+        $this->Cell(array_sum($w),0,'','T');
     }
+
+
 
     function Header()
     {
