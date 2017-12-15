@@ -17,7 +17,7 @@
                     <li role="presentation"><a href="einnahmen.php">Einnahmen</a></li>
                     <li role="presentation"><a href="abrechnungen.php">Abrechnungen</a></li>
                 </ul>
-                <a href="https://www.photoca.se" class="btn btn-primary navbar-btn navbar-right" type="button">Logout</a>
+                <a href="https://www.photoca.se/view/logout.php" class="btn btn-primary navbar-btn navbar-right" type="button">Logout</a>
             </div>
         </div>
     </nav>
