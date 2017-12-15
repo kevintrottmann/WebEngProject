@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include ("view/db.connection.login.php");
 include ("view/db.connection.php");
 
@@ -24,6 +26,7 @@ echo "<script type='text/javascript'>window.document.location.href ='view/welcom
  
 }
 ?>
+
 
 
 <!DOCTYPE html>

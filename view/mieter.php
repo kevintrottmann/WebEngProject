@@ -1,8 +1,18 @@
+<?php
+session_start();
+if(!isset($_SESSION['userid'])){
+    header("location:http://photoca.se/index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
-<?php include "header.php"; 
-include "db.connection.php"; ?>
+<?php
+    //include "authorized.php";
+    include "header.php";
+    include "db.connection.php";
+?>
  
 
 <body>
