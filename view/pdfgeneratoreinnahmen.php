@@ -1,4 +1,11 @@
 <?php
+session_start();
+if(!isset($_SESSION['userid'])){
+    header("location:http://photoca.se/index.php");
+}
+?>
+
+<?php
 include "db.connection.php";
 require('./assets/fpdf/fpdf.php');
 
