@@ -60,7 +60,7 @@ echo "<script type='text/javascript'>window.document.location.href ='view/welcom
                 <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(244,175,71);">Log In</button>
             </div>
 			<a href="view/registrieren.php" class="forgot">Registrieren?</a>
-			<a href="view/mieter.php" class="forgot">Überspringen</a></form>
+			</form>
     </div>
     <script src="view/assets/js/jquery.min.js"></script>
     <script src="view/assets/bootstrap/js/bootstrap.min.js"></script>
