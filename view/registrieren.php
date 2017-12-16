@@ -52,14 +52,14 @@ if(isset($_GET['register'])) {
  
  //Keine Fehler, wir können den Nutzer registrieren
  if(!$error) { 
- //$passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
+ $passwort = md5($passwort);
  
  $statement = $pdo->prepare("INSERT INTO users (email, passwort,vorname,nachname) VALUES (:email, :passwort, :vorname, :nachname)");
  $result = $statement->execute(array('email' => $email, 'passwort' => $passwort, 'vorname' => $vorname,'nachname' => $nachname, ));
  
  if($result) { 
- echo 'Du wurdest erfolgreich registriert. <a href="./index.php">Zum Login</a>';
- $showFormular = false;
+ echo '<script>window.location.href = "https://www.photoca.se";</script>';
+ 
  } else {
  echo "alert('Beim Abspeichern ist leider ein Fehler aufgetreten')";
  }
