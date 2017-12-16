@@ -40,7 +40,7 @@ if(!isset($_SESSION['userid'])){
 			<div class="form-group">
                 <label class="control-label col-sm-2" for="mieter">Mieter_ID:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="mieter" value="<?php echo $datensatz["ID_Mieter"]; ?>">
+                    <input type="text" class="form-control" name="mieter" readonly value="<?php echo $datensatz["ID_Mieter"]; ?>">
                 </div>
             </div>
 

@@ -40,14 +40,14 @@ if(!isset($_SESSION['userid'])){
 			<div class="form-group">
                 <label class="control-label col-sm-2" for="typ">Typ:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="typ" value="<?php echo $datensatz["Typ"]; ?>">
+                    <input type="text" class="form-control" name="typ" value="<?php echo $datensatz["Typ"]; ?>" readonly>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="art">Art:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="art" value="<?php echo $datensatz["Art"]; ?>">
+                    <input type="text" class="form-control" name="art" value="<?php echo $datensatz["Art"]; ?>" readonly>
                 </div>
             </div>
 
