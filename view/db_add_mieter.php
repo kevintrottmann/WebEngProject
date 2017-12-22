@@ -18,13 +18,6 @@ if(!isset($_SESSION['userid'])){
         $liegenschaft = $_POST['liegenschaft'];
         $mietzins = $_POST['mietzins'];
 
-    //Überprüfung, ob Formular korrekte Werte enthält
-
-
-
-
-    //Überprüfung, ob Mieter bereits in Datenbank erfasst
-
 
     //Keine Fehler, wir k�nnen den Nutzer registrieren
         $addsql = "INSERT INTO mieter (Vorname,Nachname,Strasse,PLZ,Ort,Liegenschaft,Mietzins) VALUES ('".$vorname."','".$nachname."','".$strasse."','".$plz."','".$ort."','".$liegenschaft."','".$mietzins."')";

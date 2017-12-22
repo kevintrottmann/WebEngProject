@@ -1,10 +1,16 @@
 <?php
 
+//============================================================================================================
+//	Name: 			Login Page 
+//  Beschreibung: 	Startseite von Photoca.se hier kann man sich einlogen oder zur Registrierung weiter gehen
+//============================================================================================================
+
 session_start();
 
 include ("view/db.connection.login.php");
 include ("view/db.connection.php");
 
+//Abfrage der Formulareingabe
 if(isset($_GET['login'])) {
  $email = $_POST['email'];
  $passwort = $_POST['passwort'];
@@ -14,14 +20,13 @@ if(isset($_GET['login'])) {
  $result = $statement->execute(array('email' => $email));
  $user = $statement->fetch();
  
- //ÃœberprÃ¼fung des Passworts
+ //Überprüfung des Passworts
  if ($user !== false && $passwort == $user['passwort']) {
  $_SESSION['userid'] = $user['id'];
 echo "<script type='text/javascript'>window.document.location.href ='view/welcome.php';</script>";
  } else {
  $message = "Passwort und Benutzername sind nicht korrekt";
  echo "<script type='text/javascript'>alert('$message');</script>";
-
  }
  
 }
