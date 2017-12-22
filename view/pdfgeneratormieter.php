@@ -49,12 +49,11 @@ class PDF extends FPDF
         foreach($data as $row)
         {
 
-
-            $this->Cell($w[0],6,$row[0],'LR','','C',$fill);
-            $this->Cell($w[1],6,$row[1],'LR','','L',$fill);
-            $this->Cell($w[2],6,$row[2],'LR','','L',$fill);
-            $this->Cell($w[3],6,$row[3],'LR','','C',$fill);
-            $this->Cell($w[4],6,number_format($row[4],2),'LR','','C',$fill);
+            $this->Cell($w[0],6,$row[0],'LR',0,'C',$fill);
+            $this->Cell($w[1],6,$row[1],'LR',0,'L',$fill);
+            $this->Cell($w[2],6,$row[2],'LR',0,'L',$fill);
+            $this->Cell($w[3],6,$row[3],'LR',0,'C',$fill);
+            $this->Cell($w[4],6,number_format($row[4],2),'LR',0,'C',$fill);
             $this->Ln();
             $fill = !$fill;
 

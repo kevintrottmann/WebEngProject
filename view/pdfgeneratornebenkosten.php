@@ -11,6 +11,8 @@ $jahr = $_POST['jahr'];
 
 class PDF extends FPDF
 {
+    public $padding = 8;
+
     function LoadData($sqlConnection)
     {
         $jahr = $_POST['jahr'];
@@ -45,35 +47,60 @@ class PDF extends FPDF
         $this->SetLineWidth(.3);
         $this->SetFont('Arial','B');
 
-        $w = array(10, 40, 50, 35, 35);
+        $w = array(10, 40, 70, 25, 35);
 
         for($i=0;$i<count($header);$i++)
             $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
         $this->Ln();
 
-        $this->SetFillColor(224,235,255);
-        $this->SetTextColor(0,0,0);
+        $this->SetTextColor(0, 0, 0);
         $this->SetFont('');
+
+        $i=0;
+
+        $x0=$x = $this->GetX();
+        $y = $this->GetY();
 
 
         $fill = false;
         foreach($data as $row)
         {
 
-            $this->Cell($w[0],6,$row[0],'1',0,'C',$fill);
-            $this->Cell($w[1],6,$row[1],'1',0,'L',$fill);
-            $this->Cell($w[2],6,$row[2],'1',0,'L',$fill);
-            $this->Cell($w[3],6,$row[3],'1',0,'R',$fill);
-            $this->Cell($w[4],6,number_format($row[4],2),'1',0,'R',$fill);
-            $this->Ln();
-            $fill = !$fill;
+
+            $yH = $this->getTableRowHeight($row, $w);
+            for($j = 0; $j < count($w) ; $j++)
+            {
+                $this->SetXY($x, $y);
+                $this->Cell($w[$j], $yH, "", 'LRB',0,'',$fill);
+                $this->SetXY($x, $y);
+                $this->MultiCell($w[$j],6,$row[$j],0,'L');
+                $x =$x+$w[$j];
+            }
+
+            $y=$y+$yH; //move to next row
+            $x=$x0; //start from firt column
 
         }
 
+    }
 
-        $this->Cell(array_sum($w),0,'','T');
+    public function getTableRowHeight($row, $w)
+    {
+        $yH=$this->FontSize; //height of the row
+        $temp = array();
+        for($j = 0; $j < count($w); $j++)
+        {
+            $str_w = $this->GetStringWidth($row[$j]);
+            $temp[] = (int) $str_w / $w[$j];
+        }
+        $m_str_w = max($temp);
+        if($m_str_w > 1)
+        {
+            $yH *= $m_str_w;
 
-
+        }
+        $yH += $this->padding;
+        return $yH;
     }
 
     function Header()
@@ -95,16 +122,16 @@ class PDF extends FPDF
 
 $pdf = new PDF('p', 'mm','A4');
 $pdf->AddPage();
-$pdf->SetFont('Arial','B','14');
+$pdf->SetFont('Arial','B','12');
 
 $pdf->Cell(130,5,'Photoca.se GmbH',0,1);
 $pdf->Cell(130,5,'Von Rollstrasse 10',0,1);
 $pdf->Cell(130,5,'4600 Olten',0,1);
-$pdf->Cell(130,5,'Rechnungsjahr:'.' '.$date,0.1,1);
-$pdf->Cell(130,5,'Rechnungsdatum:'.' '.$jahr,0.1,1);
+$pdf->Cell(130,5,'Rechnungsdatum:'.' '.$date,0.1,1);
+$pdf->Cell(130,5,'Rechnungsjahr:'.' '.$jahr,0.1,1);
 $pdf->Cell(130,5,'MwSt-Nr: CHE-123.456.789',0.1,1);
 
-$pdf->SetFont('Arial','','12');
+$pdf->SetFont('Arial','','10');
 
 $pdf->Cell(130,5,'',0,1);
 $pdf->Cell(130,5,'Tele: +41 62 797 00 01',0);
@@ -112,19 +139,14 @@ $pdf->Cell(130,5,'Email: photo@ca.se',0);
 
 $pdf->Cell(189,10,'',0.1,1);
 
-$pdf->Cell(10,5,'',0.1);
-$pdf->Cell(90,5,'',0.1,1);
-
-$pdf->Cell(189,10,'',0.1,1);
-
-$pdf->SetFont('Arial','','12');
+$pdf->SetFont('Arial','','8');
 
 $data = $pdf->LoadData($link);
 $header = array('ID','Art', 'Rechnungstext', 'Datum', 'Betrag in CHF');
 $pdf->FancyTable($header,$data);
 
-$pdf->SetFont('Arial','B','14');
-
+$pdf->SetFont('Arial','B','10');
+$pdf->Cell(130,5,'',0,1);
 $pdf->Cell(130,5,'',0,1);
 $pdf->Cell(100,5,'Total in CHF:',0,0,'R');
 
