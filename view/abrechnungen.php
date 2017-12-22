@@ -16,7 +16,7 @@ include "db.connection.php"; ?>
     <div class="page-header">
         <h3>Abrechnungen</h3>
 		</br>
-		<form class="form-horizontal" action="abrechnungen_value.php" name="abrechnungform" method="post">
+		<form class="form-horizontal" action="pdfgeneratorabrechnung.php" name="abrechnungform" method="post">
 		<div class="form-group">
                 <label class="control-label col-sm-2" for="id">Jahr der Abrechnung:</label>
                 <div class="col-sm-10">
@@ -44,7 +44,7 @@ include "db.connection.php"; ?>
 		</form>
 		</br>
 		</br>
-		<form class="form-horizontal" action="abrechnungen_value1.php" name="abrechnungform1" method="post">
+		<form class="form-horizontal" action="pdfgeneratorheizkosten.php" name="abrechnungform1" method="post">
 		<div class="form-group">
                 <label class="control-label col-sm-2" for="id">Jahr der Abrechnung:</label>
                 <div class="col-sm-10">
@@ -72,7 +72,7 @@ include "db.connection.php"; ?>
 		</form>
 		</br>
 		</br>
-		<form class="form-horizontal" action="abrechnungen_value2.php" name="abrechnungform2" method="post">
+		<form class="form-horizontal" action="pdfgeneratornebenkosten.php" name="abrechnungform2" method="post">
 		<div class="form-group">
                 <label class="control-label col-sm-2" for="id">Jahr der Abrechnung:</label>
                 <div class="col-sm-10">

@@ -1,11 +1,5 @@
 <?php
-session_start();
-if(!isset($_SESSION['userid'])){
-    header("location:http://photoca.se/index.php");
-}
-?>
 
-<?php
 include "db.connection.php";
 require('./assets/fpdf/fpdf.php');
 
@@ -29,8 +23,6 @@ class PDF extends FPDF
             $line .= ';';
             $line .= $datensatz1["Vorname"];
             $line .= ';';
-            $line .= $datensatz["Rechnungstext"];
-            $line .= ';';
             $line .= $datensatz["Datum"];
             $line .= ';';
             $line .= $datensatz["Betrag"];
@@ -48,7 +40,7 @@ class PDF extends FPDF
         $this->SetLineWidth(.3);
         $this->SetFont('Arial','B');
 
-        $w = array(45, 45, 45, 45, 45, 45);
+        $w = array(30, 60, 60, 60, 60);
 
         for($i=0;$i<count($header);$i++)
             $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
@@ -63,17 +55,15 @@ class PDF extends FPDF
         foreach($data as $row)
         {
 
-            $this->Cell($w[0],6,$row[0],'LR',0,'L',$fill);
+            $this->Cell($w[0],6,$row[0],'LR',0,'C',$fill);
             $this->Cell($w[1],6,$row[1],'LR',0,'L',$fill);
-            $this->Cell($w[2],6,$row[2],'LR',0,'R',$fill);
+            $this->Cell($w[2],6,$row[2],'LR',0,'L',$fill);
             $this->Cell($w[3],6,$row[3],'LR',0,'R',$fill);
-            $this->Cell($w[4],6,$row[4],'LR',0,'R',$fill);
-            $this->Cell($w[5],6,$row[5],'LR',0,'R',$fill);
+            $this->Cell($w[4],6,number_format($row[4],2),'LR',0,'C',$fill);
             $this->Ln();
             $fill = !$fill;
 
         }
-
 
         $this->Cell(array_sum($w),0,'','T');
     }
@@ -97,10 +87,10 @@ class PDF extends FPDF
 
 $pdf = new PDF();
 $pdf->AliasNbPages();
-$header = array('ID','Nachname', 'Vorname', 'Rechnungstext', 'Datum', 'Betrag');
+$header = array('ID','Nachname', 'Vorname', 'Datum', 'Betrag in CHF');
 $data = $pdf->LoadData($link);
-$pdf->SetFont('Arial','',14);
 $pdf->AddPage('L');
+$pdf->SetFont('Arial','',14);
 $pdf->FancyTable($header,$data);
 $pdf->Output();
 
