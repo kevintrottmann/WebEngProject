@@ -1,5 +1,12 @@
 <?php
+//============================================================================================================
+//	Name: Menü Mieter 
+//  Beschreibung: Zeigt alle Mieter an, mit Buttons kann man erstellen, löschen, verändern oder PDF generieren
+//============================================================================================================
+
 session_start();
+
+//Überprüft ob User eingeloggt
 if (!isset($_SESSION['userid'])) {
     header("location:http://photoca.se/index.php");
 }
@@ -9,7 +16,6 @@ if (!isset($_SESSION['userid'])) {
 <html>
 
 <?php
-//include "authorized.php";
 include "header.php";
 include "db.connection.php";
 ?>
@@ -57,8 +63,8 @@ include "db.connection.php";
             ?>
             </tbody>
         </table>
-        <a href="form_neuermieter.php" class="btn btn-primary" type="button"> Mieter erfassen </a> <a
-                href="pdfgeneratormieter.php" target="_blank" class="btn btn-primary">Drucken</a>
+        <a href="form_neuermieter.php" class="btn btn-primary" type="button"> Mieter erfassen </a> 
+		<a href="pdfgeneratormieter.php" target="_blank" class="btn btn-primary">Drucken</a>
 
         </br>
         </br>

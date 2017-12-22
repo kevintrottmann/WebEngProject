@@ -1,9 +1,16 @@
 <?php
+
+//============================================================================================================
+//	Name: 			Login Page 
+//  Beschreibung: 	Startseite von Photoca.se hier kann man sich einlogen oder zur Registrierung weiter gehen
+//============================================================================================================
+
 session_start();
 
 include ("view/db.connection.login.php");
 include ("view/db.connection.php");
 
+//Abfrage der Formulareingabe
 if(isset($_GET['login'])) {
  $email = $_POST['email'];
  $passwort = $_POST['passwort'];

@@ -1,4 +1,10 @@
 <?php
+//============================================================================================================
+//	Name: Formular neue Einnahme 
+//  Beschreibung: Hier kann man neue Einnahmen erfassen
+//============================================================================================================
+
+//Überprüft ob User eingeloggt
 session_start();
 if (!isset($_SESSION['userid'])) {
     header("location:http://photoca.se/index.php");

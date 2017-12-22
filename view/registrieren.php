@@ -1,5 +1,12 @@
 <?php
+
+//============================================================================================================
+//	Name: Registrierungsformular
+//  Beschreibung: Ein Formular wo man seine Logindaten eingeben kann
+//============================================================================================================
+
 include "db.connection.login.php";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +45,7 @@ if (isset($_GET['register'])) {
         $error = true;
     }
 
-    //�berpr�fe, dass die E-Mail-Adresse noch nicht registriert wurde
+    //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
     if (!$error) {
         $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
         $result = $statement->execute(array('email' => $email));
@@ -50,7 +57,7 @@ if (isset($_GET['register'])) {
         }
     }
 
-    //Keine Fehler, wir k�nnen den Nutzer registrieren
+    //Keine Fehler, wir können den Nutzer registrieren
     if (!$error) {
         $passwort = md5($passwort);
 

@@ -1,4 +1,11 @@
 <?php
+
+//============================================================================================================
+//	Name: Menü Einnahmen 
+//  Beschreibung: Zeigt alle Einnahmen an, mit Buttons kann man erstellen, löschen, verändern oder PDF generieren
+//============================================================================================================
+
+//Überprüft ob User eingeloggt
 session_start();
 if (!isset($_SESSION['userid'])) {
     header("location:http://photoca.se/index.php");

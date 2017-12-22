@@ -1,5 +1,13 @@
 <?php
+
+//============================================================================================================
+//	Name: Formular neue Rechnung 
+//  Beschreibung: Hier kann man neue Rechnungen erfassen
+//============================================================================================================
+
 session_start();
+
+//Überprüft ob User eingeloggt
 if (!isset($_SESSION['userid'])) {
     header("location:http://photoca.se/index.php");
 }
