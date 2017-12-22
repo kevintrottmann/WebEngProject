@@ -32,13 +32,13 @@ $userid = $_SESSION['userid'];
 			Sie sind  Besitzer eines 12-Familienhauses, der die Verwaltung selbständig führen will. Mithilfe von Photoca.se erhalten Sie  ein praktisches Onlinetool, welches man einfach über den Webbrowser bedienen kann.</br></br>
 			
 			<h4>Folgendes können Sie jederzeit online abrufen:</h4>
-			<h5>-Mieterspiegel (Adressen und Mietzinse)</br>
+				-Mieterspiegel (Adressen und Mietzinse)</br>
 				-Erfasste Rechnungen (Reparatur-, Oel-, Wasser-, Strom-, Hauswartsrechnungen)</br>
 				-Weitere Rechnungen sollen jederzeit erfasst werden können.</br>
 				-Mietzinseingänge sollen einfach erfasst werden können.</br>
 				-Ende Jahr soll man eine Abrechnung ausdrucken können.</br>
 				-Die Heizkostenabrechnung und die Nebenkosten sollen ausgewiesen werden.</br>
-				-Über Formulare können Daten eingegeben, mutiert oder gelöscht werden.</h5></br>
+				-Über Formulare können Daten eingegeben, mutiert oder gelöscht werden.</br>
 
 
         
