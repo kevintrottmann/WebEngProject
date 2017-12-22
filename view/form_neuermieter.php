@@ -1,5 +1,14 @@
 <?php
+
+//============================================================================================================
+//	Name: Formular neuer Mieter 
+//  Beschreibung: Hier kann man neue Mieter erfassen
+//============================================================================================================
+
+
 session_start();
+
+//Überprüft ob User eingeloggt
 if(!isset($_SESSION['userid'])){
     header("location:http://photoca.se/index.php");
 }
