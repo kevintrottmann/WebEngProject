@@ -16,16 +16,9 @@ if (!isset($_SESSION['userid'])) {
 <!DOCTYPE html>
 <html>
 
-<?php include "header.php";
-include "db.connection.php";
-
-if (!isset($_SESSION['userid'])) {
-    echo $_SESSION['userid'];
-}
-
-//Abfrage der Nutzer ID vom Login
-$userid = $_SESSION['userid'];
-
+<?php 
+	include "header.php";
+	include "db.connection.php";
 ?>
 
 
