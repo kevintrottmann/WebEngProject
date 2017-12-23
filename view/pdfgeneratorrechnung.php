@@ -124,6 +124,7 @@ $header = array('ID','Typ', 'Art', 'Rechnungstext', 'Datum', 'Betrag in CHF');
 $data = $pdf->LoadData($link);
 $pdf->SetFont('Arial','','8');
 $pdf->AddPage('L');
+
 $pdf->FancyTable($header,$data);
 $pdf->Output();
 ?>
